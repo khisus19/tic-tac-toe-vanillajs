@@ -1,4 +1,5 @@
 
+const message = document.querySelector(".message");
 
 const EX = "❌";
 const OES = "⭕";
@@ -42,7 +43,6 @@ function pick() {
 }
 
 function checkWin(arrayInTurn) {
-
   
   WINS.map(winPattern => {
     const containsAll = winPattern.every(element => {
@@ -50,7 +50,7 @@ function checkWin(arrayInTurn) {
     })
 
     if (containsAll) {
-      console.log("WIN!");
+      message.innerHTML = "You win!"
 
       for (let i = 0; i < cell.length; i++) {
         const element = cell[i];
