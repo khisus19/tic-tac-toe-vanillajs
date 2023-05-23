@@ -55,25 +55,33 @@ a:hover {
 body {
   background-color: var(--clr-dark);
 }
-h1, h3 {
+h1, h2, h3, p {
   color: #fff;
+}
+h1 {
+  height: 50px;
+}
+h2 {
+  height: 30px;
 }
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 8px;
   text-align: center;
   margin: 20px auto;
   width: 90%;
   max-width: 450px;
+  width: 100%;
 }
 .earth {
   margin: 0 auto;
   width: 100px;
 }
 
-section {
+.gridSection {
   margin: 20px auto;
   max-width: 300px;
   display: grid;
@@ -109,4 +117,41 @@ section {
 .cell-i {
   border-top: 2px solid white;
   border-left: 2px solid white;
+}
+
+/* RESET BUTTON */
+#resetBtn {
+  margin: 10px 0;
+  padding: 10px 20px;
+  /* width: 120px; */
+  background-color: var(--clr-main);
+  border: 1px solid #6c7589;
+  border-radius: 8px;
+  color: var(--clr-light);
+  font-weight: 800;
+  font-size: 1rem;
+}
+#resetBtn:hover {
+  cursor: pointer;
+  background-color: #14e4ff;
+}
+#resetBtn:active {
+  background-color: #04c4dd;
+  
+}
+
+/* SCORE BOARD */
+
+.scoreBoard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+.scoreBoard div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
