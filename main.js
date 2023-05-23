@@ -1,7 +1,7 @@
 
 const message = document.querySelector(".message");
 const inTurnMessageEle = document.querySelector(".inTurnMessage");
-const resetBtnEle = document.getElementById("resetBtn");
+const resetBtnEle = document.querySelector(".resetBtn");
 const cell = document.querySelectorAll(".cell");
 const firstPlayerPointsEle = document.querySelector(".firstPlayerPoints");
 const secondPlayerPointsEle = document.querySelector(".secondPlayerPoints");
