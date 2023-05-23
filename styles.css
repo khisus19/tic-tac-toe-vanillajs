@@ -86,35 +86,17 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
+  background-image: url("./assets/tic-tac-toe-grid.svg");
 }
 .cell {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: larger;
+  font-size: 2rem;
   user-select: none;
 }
 .cell:hover {
   cursor: pointer;
-}
-.cell-a {
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
-}
-.cell-c {
-  border-bottom: 2px solid white;
-  border-left: 2px solid white;
-}
-.cell-e {
-  border: 2px solid white;
-}
-.cell-g {
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-}
-.cell-i {
-  border-top: 2px solid white;
-  border-left: 2px solid white;
 }
 
 /* RESET BUTTON */
@@ -171,7 +153,9 @@ hr {
                 "in-turn in-turn"
                 "grid scoreboard"
                 "reset-btn reset-btn";
-    max-width: 620px;
+    width: 600px;
+    max-width: 640px;
+    padding: 0 10px;
     grid-template-columns: 2fr 1fr;
     justify-items: center;
   }
