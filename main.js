@@ -59,8 +59,15 @@ function checkWin(arrayInTurn) {
       return arrayInTurn.includes(element);
     })
 
+    containsAll && console.log(winPattern);
+
     if (containsAll) {
       message.innerHTML = `${isExTurn ? EX : CHECK} Wins`
+
+      winPattern.map(element => {
+        document.getElementById(element).style.animation = 'winningAnimation 3s ease infinite'
+        document.getElementById(element).style.transform = 'scale(1.2)'
+      })
 
       for (let i = 0; i < cell.length; i++) {
         const element = cell[i];
@@ -83,6 +90,7 @@ const resetGame = () => {
   for (let i = 0; i < cell.length; i++) {
     const element = cell[i];
     element.innerHTML = "";
+    element.style.animation = ""
   }
   exesPicks = [];
   checksPicks = [];

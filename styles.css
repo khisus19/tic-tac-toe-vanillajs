@@ -97,6 +97,18 @@ main {
 }
 .cell:hover {
   cursor: pointer;
+  background-color: var(--clr-dark);
+  border: 1px solid #fff;
+  transform: scale(1.15);
+  transition: ease 300ms;
+}
+@keyframes winningAnimation {
+  0%{rotate: 0;}
+  25%{rotate: 45deg;}
+  50%{rotate: 0deg;}
+  75%{rotate: -45deg;}
+  100%{rotate: 0deg;}
+
 }
 
 /* RESET BUTTON */
