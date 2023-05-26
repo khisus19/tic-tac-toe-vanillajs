@@ -29,12 +29,13 @@ const WINS = [
 const addCellListeners = () => {
   for (let i = 0; i < cell.length; i++) {
     const element = cell[i];
-    element.addEventListener("click", pick)
+    element.addEventListener("click", pick);
+    element.classList.add("cell-hovered");
   }
 }
 
 function pick() {
-  message.innerText = "Continue"
+  message.innerText = "Continue";
 
   if (isExTurn) {
     inTurnMessageEle.innerHTML = CHECK;
@@ -59,8 +60,6 @@ function checkWin(arrayInTurn) {
       return arrayInTurn.includes(element);
     })
 
-    containsAll && console.log(winPattern);
-
     if (containsAll) {
       message.innerHTML = `${isExTurn ? EX : CHECK} Wins`
 
@@ -71,7 +70,8 @@ function checkWin(arrayInTurn) {
 
       for (let i = 0; i < cell.length; i++) {
         const element = cell[i];
-        element.removeEventListener("click", pick)
+        element.removeEventListener("click", pick);
+        element.classList.remove("cell-hovered");
       }
 
       if (isExTurn) {

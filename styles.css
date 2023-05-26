@@ -95,7 +95,7 @@ main {
   font-size: 2rem;
   user-select: none;
 }
-.cell:hover {
+.cell-hovered:hover {
   cursor: pointer;
   background-color: var(--clr-dark);
   border: 1px solid #fff;
