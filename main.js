@@ -64,7 +64,7 @@ function checkWin(arrayInTurn) {
       message.innerHTML = `${isExTurn ? EX : CHECK} Wins`
 
       winPattern.map(element => {
-        document.getElementById(element).style.animation = 'winningAnimation 3s ease infinite'
+        document.getElementById(element).style.animation = 'winningAnimation 1.54s linear infinite both'
         document.getElementById(element).style.transform = 'scale(1.2)'
       })
 
